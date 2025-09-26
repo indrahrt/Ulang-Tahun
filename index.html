@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Ulang Tahun 🎉</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- GSAP, Confetti, Howler -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+  <!-- Halaman input nama -->
+  <div class="container" id="formPage">
+    <h2>Masukkan Nama Lengkapmu 🎂</h2>
+    <input type="text" id="nama" placeholder="Nama lengkap...">
+    <br>
+    <button onclick="cekNama()">Submit</button>
+    <div class="message" id="pesan"></div>
+  </div>
+
+  <!-- Halaman perayaan -->
+  <div class="celebration hidden" id="celebrationPage">
+    <h1 id="judulUlangTahun">🎉 Selamat Ulang Tahun 🎉</h1>
+    
+    <div class="cake-area">
+      <!-- Balon kiri -->
+      <div class="balloon balloon-left"></div>
+      <div class="balloon balloon-left"></div>
+
+      <!-- Kue -->
+      <div class="cake">
+        <div class="layer-top">
+          <div class="cream"></div>
+        </div>
+        <div class="layer-bottom"></div>
+        <div class="candle">
+          <div class="flame" id="flame"></div>
+        </div>
+      </div>
+
+      <!-- Balon kanan -->
+      <div class="balloon balloon-right"></div>
+      <div class="balloon balloon-right"></div>
+    </div>
+
+    <h3>Dengerin dulu lagunya sebelum tiup lilin 😊</h3>
+    <button onclick="tiupLilin()">Tiup Lilin 🕯️</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

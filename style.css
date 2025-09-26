@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(143, 143, 143, 0.2);
+  z-index: 2;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff69b4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ff1493;
+  font-weight: bold;
+}
+
+/* Halaman celebration */
+.celebration {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#judulUlangTahun {
+  margin-bottom: 120px; 
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Area kue + balon */
+.cake-area {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Balon */
+.balloon {
+  width: 50px;
+  height: 70px;
+  background: radial-gradient(circle at 30% 30%, #ff69b4, #ff1493);
+  border-radius: 50% 50% 45% 55%;
+  position: relative;
+}
+
+.balloon::after {
+  content: '';
+  width: 2px;
+  height: 40px;
+  background: #555;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Kue */
+.cake {
+  margin: 0 auto;
+  width: 200px;
+  position: relative;
+}
+
+/* Layer bawah */
+.layer-bottom {
+  width: 100%;
+  height: 80px;
+  background: #ffb347;
+  border-radius: 0 0 15px 15px;
+  box-shadow: inset 0 -10px #ff9f40;
+}
+
+/* Layer atas */
+.layer-top {
+  width: 80%;
+  height: 60px;
+  background: #ff69b4;
+  border-radius: 15px 15px 0 0;
+  margin: 0 auto;
+  box-shadow: inset 0 -10px #ff4081;
+  position: relative;
+  top: -10px;
+  z-index: 2;
+}
+
+/* Cream */
+.cream {
+  width: 90%;
+  height: 20px;
+  background: white;
+  border-radius: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: -5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Lilin */
+.candle {
+  width: 20px;
+  height: 60px;
+  background: repeating-linear-gradient(
+    45deg, white, white 10px, red 10px, red 20px
+  );
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Api lilin */
+.flame {
+  width: 20px;
+  height: 30px;
+  background: radial-gradient(circle, yellow 40%, orange 70%, red 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flicker 0.15s infinite alternate;
+  box-shadow: 0 0 20px 8px rgba(255,200,0,0.6);
+}
+
+@keyframes flicker {
+  from { transform: translateX(-50%) scale(1); opacity: 1; }
+  to { transform: translateX(-50%) scale(1.1); opacity: 0.85; }
+}
+
+/* Sprinkle */
+.sprinkle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+}
